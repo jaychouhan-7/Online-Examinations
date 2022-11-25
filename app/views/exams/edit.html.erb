@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="d-flex flex-column gap-4">
+      <div>
+      <%= form_with model: [@teacher, @exam] do |f| %>
+      </div>
+      <div>
+      <%= f.label :exam_name %>
+      <%= f.text_field :exam_name, class: "mr-6"%>
+      </div>
+      <div>
+      <%= f.label :exam_category %>
+      <%= f.text_field :exam_category %>
+      </div>
+      <div>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      </div>
+      <div>
+      <%= f.label :number_of_questions %>
+      <%= f.text_field :number_of_questions %>
+      </div>
+      <div>
+      <%= f.label :maximum_marks %>
+      <%= f.text_field :maximum_marks %>
+      </div>
+      <div>
+      <%= f.label :exam_duration %>
+      <%= f.time_field :exam_duration %>
+      </div>
+      <div>
+      <%= f.submit %>
+      </div>
+      <% end %>
+  </div>
+</div>

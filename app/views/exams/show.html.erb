@@ -1,0 +1,14 @@
+<div class="p-4 border border-dark m-auto" style="width:1100px" class="">
+
+<div class="p-2 border border-primary rounded-5">
+<h3 class="d-flex justify-content-between"><span>Time: <%= @exam.exam_duration.hour %><%= @exam.exam_duration.hour==1?" hour":" hours" %></span><span class="mx-6"><%= @exam.exam_name %></span><span>Total Marks: <%= @exam.maximum_marks %></span></h3>
+<h5>Category: <%= @exam.exam_category %></h5>
+<p>Description: <%= @exam.description %></p>
+<p>This exam has <%= @exam.number_of_questions %> questions</p>
+
+</div>
+
+
+<%= link_to "Edit Exam", edit_teacher_exam_path(@teacher,@exam) %>
+<%= link_to "Add questions", new_teacher_exam_path(@teacher,@exam) %>
+</div>
